@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animal Quiz</title>
+    <link rel="icon" href="./images/lion.png" type="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="./css/style_Page_Quiz.css">
+    <script src="./JS/randomColor.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+</head>
+
+<body>
+    <audio controls id="wrong" style="display:none">
+        <source src="sound/wrong.mp3" type="audio/mp3">
+
+    </audio>
+    <audio controls id="ding" style="display:none">
+        <source src="sound/ding.mp3" type="audio/mp3">
+    </audio>
+    <audio controls id="level" style="display:none">
+        <source src="sound/level.mp3" type="audio/mp3">
+    </audio>
+    <div class=" main">
+        <!-- Banner -->
+        <div id="banner">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <a href="home.html">
+                        <img class="img_home img-responsive" src="./images/home.png" alt="home">
+                    </a>
+                    <a href="#">
+                        <img class="hidden-xs img_next img-responsive" src="./images/nexts.png" alt="next" id="next1" onclick="Next(this)">
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="image">
+                        <img class="img_flower img-responsive center-block" src="./images/flower2.png" alt="flower">
+                    </div>
+                    <div class="text">
+                        <p id="count_win_question">0</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 wrap_score">
+
+                    <div class="img_coin">
+                        <img src="./images/Coin.png" alt="coin" width="50%">
+                    </div>
+                    <div class="score">
+                        <p id="score_coin">0</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Banner -->
+        <div id="question">
+            <div class="row">
+                <div class=" col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                    <div class="img_question">
+                        <img id="img_MyQuestion" class="img_content img-responsive" src="" alt="ant">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Button Answer -->
+        <div id="button">
+
+            <!-- <div class="container"> -->
+            <div class="row">
+                <div class="col-md-6 text-right ">
+                    <a id="answer1" class="button-link blue" href="#" onclick="checkAnswer(this)"></a>
+                </div>
+                <div class="col-md-6">
+                    <a id="answer2" class="button-link red" href="#" onclick="checkAnswer(this)"></a>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a id="answer3" class="button-link green" href="#" onclick="checkAnswer(this)"></a>
+                </div>
+                <div class="col-md-6">
+                    <a id="answer4" class="button-link yellow" href="#" onclick="checkAnswer(this)"></a>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div id="test_lose">
+           
+            <section id="congratulation" data-wow-delay=".25s" class="wow fadeInDownBig">
+                <div class="container">
+                    <div class="row">
+                        <div class="congratulation-border">
+                            <img class="congratulation-star img-responsive" src="images/star1.png" alt="star" />
+                            <p class="congratulation-result">You lose!</p>
+                            <div class="congratulation-coin">
+                                <img class="img-responsive" src="images/dollar.png" alt="dollar" />
+                                <span id="lose_point_number" class="congratulation-coin__point">0</span>
+                            </div>
+                        </div>
+                        <div class="congratulation-replay">
+                            <a class="congratulation-replay__again" href="home.html">Replay</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="test_win">
+            <div id="audio_win" style="display:none;">
+                <audio preload="none">
+                    <source src="./sound/level.mp3" />
+                </audio>
+            </div>
+
+            <section id="congratulation" data-wow-delay=".25s" class="wow fadeInDownBig">
+                <div class="container">
+                    <div class="row">
+                        <div class="congratulation-border">
+                            <img class="congratulation-star img-responsive" src="images/star1.png" alt="star" />
+                            <p class="congratulation-result">You're talended!</p>
+                            <div class="congratulation-coin">
+                                <img class="img-responsive" src="images/Coin.png" alt="coin" />
+                                <span class="congratulation-coin__point">+ 100</span>
+                            </div>
+                            <div class="congratulation-socials">
+                                <a class="congratulation-socials__link" href="#">
+                                    <img src="images/facebook.png" alt="facebook" />
+                                </a>
+                                <a class="congratulation-socials__link" href="#">
+                                    <img src="images/twitter.png" alt="twitter" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="congratulation-control">
+
+                            <button id="win_result" class="congratulation-control__addax">
+                                <p id="win_text_result"></p>
+                                <img class="congratulation-img__addax img-responsive" src="images/price.png" alt="price">
+                            </button>
+
+
+
+                            <button class="congratulation-control__next" onclick="onNextClick()">
+                                Next!
+                                <img class="congratulation-img__next img-responsive" src="images/next2.png" alt="next2">
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        <!-- win final -->
+        <div id="win_final" style="display: none;">
+            
+            <section id="congratulation" data-wow-delay=".25s" class="wow fadeInDownBig">
+                <div class="container">
+                    <div class="row">
+                        <div class="congratulation-border">
+                            <img class="congratulation-star img-responsive" src="images/star1.png" alt="star" />
+                            <p class="congratulation-result">You win!</p>
+                            <div class="congratulation-coin">
+                                <img class="img-responsive" src="images/dollar.png" alt="dollar" />
+                                <span id="win_point_number" class="congratulation-coin__point">0</span>
+                            </div>
+                        </div>
+                        <div class="congratulation-replay">
+                            <a class="congratulation-replay__again" href="home.html">Replay</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- end win final -->
+    </div>
+
+
+</body>
+
+</html>

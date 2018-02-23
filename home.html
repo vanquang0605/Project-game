@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animal Quiz</title>
+    <link rel="icon" href="./images/lion.png" type="" />
+    <link rel="stylesheet" href="./css/style_Home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./JS/randomColor.js"></script>
+
+</head>
+
+<body id="body">
+    <audio autoplay loop>
+        <source src="./sound/music.mp3"/>
+    </audio>
+    <div class="container-fluid">
+        <div class="row header">
+            <div class="col-md-4 col-md-offset-4">
+                <img class="img_title img-responsive center-block  " src="./images/lion.png" alt="lion"><br>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                <img class="img_textTitle img-responsive center-block" src="./images/2.png" alt="animal quiz">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="./quizPage.html" onclick="setRandomColor()"><img class="img_topic_1 img-responsive center-block " src="./images/land.png" alt="land">
+                </a>
+                <img class="img_textTopic img-responsive center-block" src="./images/1.png" alt="animal on land">
+            </div>
+            <div class="col-md-4">
+                <a href="./quizPage.html" onclick="setRandomColor()"><img class="img_topic_2 img-responsive center-block " src="./images/sea.png" alt="sea">
+                </a>
+                <img class="img_textTopic img-responsive center-block" src="./images/3.png" alt="animal on sea">
+            </div>
+            <div class="col-md-4">
+                <a href="./quizPage.html" onclick="setRandomColor()"><img class="img_topic_3 img-responsive center-block img-circle" src="./images/sky.png" alt="sky">
+                </a>
+                <img class="img_textTopic img-responsive center-block " src="./images/4.png" alt="animal on sky">
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

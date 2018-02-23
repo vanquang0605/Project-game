@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: myFont;
+    background-color: #f4f4f4f4;   
+}
+.congratulation-border {
+    width: 100%;
+    margin: auto;
+    border: 10px solid transparent;
+    padding: 20px 0;
+    border-image: url("../images/border.png") 30 round;
+    max-width:  80%;
+}
+
+.congratulation-star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.congratulation-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    text-align: center;
+    padding: 10px 0 0 0;
+    color: #2997e2;
+}
+
+.congratulation-coin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 0 30px 0; */
+}
+
+.congratulation-socials {
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.congratulation-socials img:hover,
+.congratulation-socials img:focus {
+    opacity: 0.9;
+}
+.congratulation-socials img{
+    padding: 0 5px;
+}
+.congratulation-coin__point {
+    font-size: 8vw;
+    color: #fcde02;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+/* .congratulation-socials__link {
+    padding: 0 5px;
+}
+.congratulation-socials__link img{
+    width: 50%;
+
+} */
+
+
+.congratulation-control__addax {
+    padding: 15px 65px;
+    background-color: #3598db;
+    color: #fff;
+    border-radius: 9px;
+    box-shadow: #255372 0 3px 0 0;
+    font-size: 40px;
+    margin-right: 5px;
+    position: relative;
+    max-width: 200px;
+    display: block;
+}
+
+.congratulation-control__next {
+    padding: 15px 63px;
+    background-color: #f111bf;
+    color: #fff;
+    border-radius: 9px;
+    box-shadow: #7e0e65 0 3px 0 0;
+    font-size: 40px;
+    position: relative;
+    max-width: 200px;
+    display: block;
+}
+
+.congratulation-control {
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.congratulation-img__addax {
+    position: absolute;
+    left: -47px;
+    top: -25px;
+}
+
+.congratulation-control .congratulation-control__addax:hover,
+.congratulation-control .congratulation-control__addax:active,
+.congratulation-control .congratulation-control__addax:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #255372;
+    transition: 0.8s ease;
+}
+
+.congratulation-control .congratulation-control__next:hover,
+.congratulation-control .congratulation-control__next:active,
+.congratulation-control .congratulation-control__next:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #7e0e65;
+    transition: 0.8s ease;
+}
+
+.congratulation-img__next {
+    position: absolute;
+    top: 18px;
+    left: 3px;
+}
+
+
+/*** Lose Page ***/
+
+.congratulation-replay {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    max-width:  80%;
+    margin:  0 auto;
+    width:  100%;
+}
+
+.congratulation-replay__again {
+    width: 100%;
+    background-color: #ff7200;
+    color: #fff;
+    border-radius: 9px;
+    box-shadow: #d44527 0 3px 0 0;
+    font-size: 40px;
+    display:  block;
+    padding-bottom: 8px;
+}
+
+.congratulation-replay .congratulation-replay__again:hover,
+.congratulation-replay .congratulation-replay__again:active,
+.congratulation-replay .congratulation-replay__again:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #d44527;
+    transition: 0.8s ease;
+}
+
+.congratulation-replay__img {
+    position: absolute;
+    top: 52px;
+    left: 320px;
+}
+/* win page */

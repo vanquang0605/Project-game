@@ -1,0 +1,39 @@
+#body {
+    background-color: #1cbcb4;
+}
+
+.header .img_title {
+    width: 50%;
+    /* display: block;
+    margin: 0 auto; */
+    padding-top: 25px;
+}
+
+.header .img_textTitle {
+    width: 75%;
+}
+
+.img_topic_1,
+.img_topic_2,
+.img_topic_3 {
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+}
+
+.img_topic_1 {
+    padding-top: 10px;
+}
+
+.img_topic_3 {
+    padding-top: 7px;
+}
+
+.img_textTopic {
+    width: 50%;
+    margin-top: 5%;
+}
+
+.img-circle {
+    background-color: #fbebd1;
+}
